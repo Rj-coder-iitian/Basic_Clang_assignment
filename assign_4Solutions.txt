@@ -1,0 +1,148 @@
+A4_1.c
+#include<stdio.h>
+int main()
+{
+  int h,no1,no2,hcf;
+  scanf("%d",&no1);
+  scanf("%d",&no2);
+  hcf=no1>no2?no1:no2;
+  for( ;((no1%hcf)!=0)||((no2%hcf)!=0);hcf--)
+    {
+
+    }
+
+  printf("HCF of %d and %d :%d\n",no1,no2,hcf); 
+  return 0;
+}
+
+A4_2.c
+#include<stdio.h>
+int main()
+{
+   int n,rev,r=0;
+   printf("Enter a Number:");
+   scanf("%d",&n);
+   for(;n!=0;n=n/10)
+   {
+    r=r*10;
+    r=r+(n%10);
+   }
+   printf("Reverse of the Number:%d\n",r);
+   return 0;
+}
+
+A4_3.c
+#include<stdio.h>
+int main()
+{
+  int h,no1,no2,lcm;
+  scanf("%d",&no1);
+  scanf("%d",&no2);
+  lcm=no1>no2?no1:no2;
+  for( ;((lcm%no1)!=0)||((lcm%no2)!=0);lcm++)
+    {
+
+    }
+
+  printf("LCM of %d and %d :%d\n",no1,no2,lcm); 
+  return 0;
+}
+
+A4_4a.c
+#include<stdio.h>
+int main()
+{
+  int n,i,j; 
+  printf("Enter the size of Pattern:\n");
+  scanf("%d",&n);
+
+  for (i=1;i<=n;i++)
+  {  
+    for(j=1;j<=i;j++)
+    { 
+     printf("*");
+     /*printf("\n");*/
+    }
+    printf("\n");
+  }
+  return 0;
+}
+
+A4_Amstrong.c
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+   int n,n1,n2,i,sd,npowers,ams=0;
+   printf("Enter a Number:");
+   scanf("%d",&n);
+   n1=n;
+   n2=n;
+   for(i=0;n!=0;n=n/10)
+   {  
+    i++;
+   }
+   /*printf("%d",i);*/
+   while(n1!=0)
+   {
+    sd=n1%10;
+    n1=n1/10;
+    ams=ams + pow(sd,i);
+   }
+   if(n2==ams)
+   {
+    printf("%d is an Amstrong Number.",n2);
+   }
+
+   else
+   {
+    printf("%d is not an Amstrong Number.",n2);
+   }
+   return 0;
+}
+A4_4b.c
+#include<stdio.h>
+int main()
+{
+  int n,p,i,j,k; 
+  printf("Enter the size of Pattern:\n");
+  scanf("%d",&n);
+
+
+ 
+  for (i=n;i>0;i--)
+  {  
+    for(j=i;j>0;j--)
+    { 
+     if(((j+1)%2)==0)
+	 {
+     printf("0");
+     }
+	 else
+	 {
+     printf("1");
+     }
+     /*p=0;
+     p++;
+     printf("%d",p%2);
+     */
+     
+    }
+    printf("\n");
+  }
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
